@@ -1,0 +1,126 @@
+@media (max-width: 1440px)
+    .promo
+        .medias_tours
+            flex-wrap: wrap
+            justify-content: center
+        &_other_tours
+            flex-basis: 100%
+            margin-top: 200px
+            justify-content: center
+        &_social_medias
+            margin-right: auto
+
+    .all_tours
+        &_box
+            min-width: 60vw
+        &_description
+            &_title
+                font-size: 35px
+    .feedback
+        &_box
+            min-width: 60vw 
+        &_description
+            &_title
+                font-size: 35px
+                line-height: 42px
+            
+
+    .all_tours
+        margin-top: 260px
+
+@media (max-height: 970px)
+    .promo
+        .medias_tours
+            justify-content: center
+        &_social_medias
+            margin-right: auto 
+        &_other_tours
+            flex-basis: 100%
+            margin-top: 200px
+            position: absolute
+            top: max(calc(100vh - 100px), 500px)
+
+    .all_tours
+        margin-top: 400px
+
+@media (max-height: 850px)
+    .promo
+        &_social_medias
+            display: none
+
+@media (max-width: 1024px)
+    h1
+        font-size: 65px
+        text-shadow: 3px 2px 5px #000
+
+    .promo
+        &_other_tours
+            display: none
+    .all_tours
+        margin-top: 160px
+        flex-direction: column
+        &_box
+            height: inherit
+            aspect-ratio: 16/9
+        &_description
+            display: flex
+            flex-direction: column
+            max-width: 100%
+            margin: 40px 0 0 0
+            &_text
+                width: 50%
+            &_button
+                margin-top: 50px
+
+    .leave_request
+        padding-left: 20%
+
+    .feedback
+        flex-direction: column-reverse
+        &_box
+            height: inherit
+            aspect-ratio: 16/9
+        &_description
+            display: flex
+            flex-direction: column
+            max-width: 100%
+            margin: 40px 0 0 0
+            &_text
+                width: 50%
+            &_button
+                margin-top: 50px
+    footer
+        padding: 0 60px 0 60px
+    
+@media (max-width: 768px)
+    h1
+        font-size: 60px
+        line-height: 85px
+    .promo
+        padding: 0 80px
+        .navigation
+            display: none
+
+    .all_tours
+        padding: 0
+        &_description
+            padding: 0 60px
+    
+    .leave_request
+        aspect-ratio: 16/9
+        flex-direction: column
+        align-items: center 
+        height: 400px
+        background-position-x: -320px
+        padding: 100px 0 0 0
+        &_description
+            padding-left: 10vw
+        &_form  
+            padding-top: 100px
+            margin: 0
+
+    .feedback
+        margin-top: 450px
+        padding: 0
+        &_description
+            padding: 0 60px
