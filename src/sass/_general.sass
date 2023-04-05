@@ -34,6 +34,8 @@ section
         justify-content: space-between
         align-items: center
         padding-top: 46px
+    .logo
+        cursor: pointer
     .navigation
         display: flex
         padding: 0
@@ -42,8 +44,13 @@ section
         list-style: none
         flex-wrap: wrap
         &_text
+            cursor: pointer
             +text(500, 15px, 18px, $second_text_color)
+        &_text:hover
+            
+
     .burger
+        cursor: pointer
         margin-top: 4px
     
     &_title
@@ -61,11 +68,19 @@ section
         &_leave_request
             +button_filled()
             width: 309px
+        &_leave_request:hover
+            +button_hover()
         &_button
             margin-left: 38px
         &_description
             margin-left: 17px
             +text(500, 16px, 26px, $second_text_color)
+        .video_button
+            cursor: pointer
+            display: flex
+            align-items: center
+        .video_button:hover
+            transform: scale(1.1)
     
     .medias_tours
         display: flex
@@ -85,12 +100,15 @@ section
             display: flex
             justify-content: space-between
             align-items: center
+        &_logos > img
+            cursor: pointer
 
     &_other_tours
         display: flex
         gap: 60px
         margin-top: 90px
         &_tour_box
+            cursor: pointer
             width: 285px
             height: 200px
             padding: 20px 25px
@@ -115,6 +133,9 @@ section
 
         #norway
             background: url(../img/tour_pic3.jpg) center center/contain no-repeat
+        
+        &_tour_box:hover
+            
 
 .all_tours
     display: flex
@@ -139,7 +160,8 @@ section
             +button_blank()
             margin-top: 86px
             width: 271px
-
+        &_button:hover
+            +button_hover()
 .leave_request
     display: flex
     margin-top: 160px
@@ -165,6 +187,7 @@ section
         width: 286px
         margin-left: 34px
         &_input
+            cursor: pointer
             background-color: transparent
             border: 1px solid #B2C2CE
             border-radius: 5px
@@ -177,7 +200,9 @@ section
         &_button
             margin-top: 30px
             +button_filled()
-            
+        &_button:hover
+            +button_hover()    
+
 .feedback
     display: flex
     margin-top: 160px
@@ -200,6 +225,8 @@ section
             +button_blank()
             margin-top: 60px
             width: 271px
+        &_button:hover
+            +button_hover()
 
 footer
     padding: 0 120px 0 120px
@@ -211,7 +238,11 @@ footer
     margin-top: 160px
     background-color: #EBEBF0
 
+    .logo
+        cursor: pointer
+
     .text
+        cursor: pointer
         +text(500, 14px, 20px, #7D6F6F)
         margin-left: 75px
     
@@ -220,6 +251,9 @@ footer
         display: flex
         justify-content: space-between
         margin-left: auto
+    
+    .social_medias > img
+        cursor: pointer
 
 
 

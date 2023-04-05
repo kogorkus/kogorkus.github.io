@@ -15,6 +15,7 @@
     color: $color
 
 =button_filled()
+    cursor: pointer
     height: 75px
     background-color: $base_color
     +text(600, 20px, 24px, $main_text_color)
@@ -24,6 +25,7 @@
     border-radius: 5px
 
 =button_blank()
+    cursor: pointer
     height: 75px
     +text(600, 20px, 24px, $base_color)
     align-items: center
@@ -34,6 +36,7 @@
 
 
 =box()
+    cursor: pointer
     min-width: 830px
     height: 475px
     padding: 50px 60px
@@ -49,3 +52,6 @@
         justify-content: space-between
         +text(500, 18px, 25px, $second_text_color)
         align-items: end
+
+=button_hover()
+    transform: scale(1.05)
