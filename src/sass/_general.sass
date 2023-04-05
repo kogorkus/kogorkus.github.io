@@ -108,6 +108,7 @@ section
         gap: 60px
         margin-top: 90px
         &_tour_box
+            transition: 1s background-size
             cursor: pointer
             width: 285px
             height: 200px
@@ -125,16 +126,20 @@ section
                 +text(500, 18px, 25px, $second_text_color)
                 align-items: end
         
-        #iceland 
-            background: url(../img/tour_pic1.jpg) center center/contain no-repeat
-
-        #dolomites
-            background: url(../img/tour_pic2.jpg) center center/contain no-repeat
-
-        #norway
-            background: url(../img/tour_pic3.jpg) center center/contain no-repeat
         
-        &_tour_box:hover
+        #iceland 
+            background: url(../img/tour_pic1.jpg) center center/100% no-repeat
+        #iceland:hover
+            +box_hover(110%)
+        #dolomites
+            background: url(../img/tour_pic2.jpg) center center/100% no-repeat
+        #dolomites:hover
+            +box_hover(110%)
+        #norway
+            background: url(../img/tour_pic3.jpg) center center/100% no-repeat
+        #norway:hover
+            +box_hover(110%)
+        
             
 
 .all_tours
@@ -143,11 +148,12 @@ section
     justify-content: center
 
     #hawaii
-        background: url(../img/imgHawaii1.jpg) center center/cover no-repeat
+        background: url(../img/imgHawaii1.jpg) center center/100% no-repeat
+        transition: 1s background-size
+    #hawaii:hover
+        +box_hover(105%)
     &_box
         +box()
-
-
     &_description
         margin: 50px 0 0 98px
         max-width: 400px
@@ -162,6 +168,8 @@ section
             width: 271px
         &_button:hover
             +button_hover()
+
+
 .leave_request
     display: flex
     margin-top: 160px
@@ -209,7 +217,10 @@ section
     justify-content: center
 
     #feedback
-        background: url(../img/imgHawaii2.jpg) center center/cover no-repeat
+        background: url(../img/imgHawaii2.jpg) center center/100% no-repeat
+        transition: 1s background-size
+    #feedback:hover
+        +box_hover(105%)
     &_box
         +box()
 
