@@ -103,7 +103,6 @@ header
                 &:after  
                     width: 0
 
-
 .menu
     display: none
     position: fixed
@@ -136,6 +135,7 @@ header
                 &:after  
                     width: 100%
     &_active
+        z-index: 2
         display: flex     
         left: 0  
 
@@ -197,7 +197,6 @@ header
             cursor: pointer
 
     &_other_tours
-        z-index: -1
         display: flex
         gap: 60px
         margin-top: 90px
@@ -234,8 +233,6 @@ header
         #norway:hover
             +box_hover(110%)
         
-            
-
 .all_tours
     display: flex
     margin-top: 160px
@@ -258,11 +255,10 @@ header
             margin-top: 25px
         &_button
             +button_blank()
-            margin-top: 86px
+            margin-top: 55px
             width: 271px
         &_button:hover
-            +button_hover()
-
+            +button_hover() 
 
 .leave_request
     display: flex
@@ -321,6 +317,7 @@ header
     &_description
         margin: 50px 98px 0 0
         max-width: 400px
+        min-width: 300px
         &_title
             +header_text(700, 42px, 55px, $main_text_color)
         &_text
