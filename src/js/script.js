@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
-    menuItem = document.querySelectorAll('.menu_item'),
+    menuItem = document.querySelectorAll('.menu_navigation_text'),
     hamburger = document.querySelector('.burger'),
     header = document.querySelector('header');
 
@@ -20,6 +20,13 @@ window.addEventListener('DOMContentLoaded', () => {
         item.addEventListener('click', () => {
             hamburger.classList.toggle('burger_active');
             menu.classList.toggle('menu_active');
+            header.classList.toggle('header_active');
+            if (header.classList.contains('header_active')) {
+                header.style.backgroundColor = 'rgba(0, 0, 0, 0.0)';
+            } else
+            {
+                header.style.backgroundColor = 'rgba(39, 52, 86, 1.0)';
+            }
         })
     })
 })
