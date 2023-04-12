@@ -60,3 +60,34 @@
 
 =button_hover()
     transform: scale(1.05)
+
+=social_medias()
+    margin-top: 130px
+    width: 209px
+    height: 53px
+    text-align: center
+    &_title
+        letter-spacing: 0.01em
+        +text(400, 14px, 17px, $second_text_color)
+    &_logos
+        margin-top: 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_logos > img
+        cursor: pointer
+
+=active_link()
+    cursor: pointer
+    +text(500, 15px, 18px, $second_text_color)
+    cursor: pointer
+    &:after
+        content: ''
+        display: block
+        margin: 0 auto
+        height: 2px
+        width: 0%
+        background-color: #fff
+    &:hover
+        &:after  
+            width: 100%

@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const menu = document.querySelector('.menu'),
     menuItem = document.querySelectorAll('.menu_navigation_text'),
     hamburger = document.querySelector('.burger'),
-    header = document.querySelector('header');
+    header = document.querySelector('.header');
 
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('burger_active');
@@ -31,7 +31,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 })
 
-function changeCss () {
+function changeHeader () {
     var promoElement = document.querySelector(".promo");
     var navElement = document.querySelector("header");
     if (!navElement.classList.contains('header_active')) {
@@ -39,4 +39,4 @@ function changeCss () {
     }
   }
   
-window.addEventListener("scroll", changeCss , false);
+window.addEventListener("scroll", changeHeader , false);

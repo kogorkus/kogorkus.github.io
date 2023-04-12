@@ -28,7 +28,7 @@ section
     padding: 0 120px
 
 
-header
+.header
     transition: 0.5s all
     background-color: rgba(0, 0 , 0, 0.3)
     position: sticky
@@ -38,7 +38,6 @@ header
     display: flex
     justify-content: space-between
     align-items: center
-    
     height: 100px
     width: 100%
     .logo
@@ -51,19 +50,18 @@ header
         list-style: none
         flex-wrap: wrap
         &_text
-            cursor: pointer
-            +text(500, 15px, 18px, $second_text_color)
-            cursor: pointer
-            &:after
-                content: ''
-                display: block
-                margin: 0 auto
-                height: 2px
-                width: 0%
-                background-color: #fff
-            &:hover
-                &:after  
-                    width: 100%
+            +active_link()
+    &_active
+        .logo
+            opacity: 0.0
+            cursor: auto
+        .navigation
+            opacity: 0.0
+            &_text
+                cursor: auto
+                &:hover
+                    &:after  
+                        width: 0
 
     .burger
         z-index: 100
@@ -85,7 +83,6 @@ header
             top: 0 
             margin-top: 20px
             height: 30px
-            
             span
                 margin-bottom: -2px
                 &:nth-child(1)
@@ -95,17 +92,6 @@ header
                 &:nth-child(3)
                     transform: translateY(3px) rotate(45deg)
 
-.header_active
-    .logo
-        opacity: 0.0
-        cursor: auto
-    .navigation
-        opacity: 0.0
-        &_text
-            cursor: auto
-            &:hover
-                &:after  
-                    width: 0
 
 .menu
     display: none
@@ -118,26 +104,16 @@ header
     width: 100%
     height: 100vh
     background-color: rgba(0, 0, 0, 0.9)
-
     &_navigation
         display: flex
         margin-top: 50px
         flex-direction: column
         align-items: center
         &_text
-            +text(500, 20px, 25px, $second_text_color)
-            cursor: pointer
             margin-top: 30px
-            &:after
-                content: ''
-                display: block
-                margin: 0 auto
-                height: 2px
-                width: 0%
-                background-color: #fff
-            &:hover
-                &:after  
-                    width: 100%
+            +active_link()
+        &_social_medias
+            +social_medias()
     &_active
         z-index: 2
         display: flex     
@@ -149,14 +125,11 @@ header
     min-height: 662px
     max-height: 970px
     background: url(../img/imgBackground1.jpg) center center/cover no-repeat              
-    
     &_title
         padding-top: 185px
-
     &_description
         margin-top: 16px
         +text(400, 25px, 95px, $second_text_color)
-    
     &_button_group
         align-items: center
         display: flex
@@ -178,28 +151,12 @@ header
             align-items: center
         .video_button:hover
             transform: scale(1.1)
-    
     .medias_tours
         display: flex
         justify-content: space-between
         align-items: center
-    
     &_social_medias
-        margin-top: 130px
-        width: 209px
-        height: 53px
-        text-align: center
-        &_title
-            letter-spacing: 0.01em
-            +text(400, 14px, 17px, $second_text_color)
-        &_logos
-            margin-top: 15px
-            display: flex
-            justify-content: space-between
-            align-items: center
-        &_logos > img
-            cursor: pointer
-
+        +social_medias()
     &_other_tours
         display: flex
         gap: 60px
@@ -216,13 +173,11 @@ header
             border-radius: 7px
             +text(700, 18px, 25px, $second_text_color)
             font-family: 'Playfair Display'
-            
             .name_part
                 display: flex
                 justify-content: space-between
                 +text(500, 18px, 25px, $second_text_color)
                 align-items: end
-        
         
         #iceland 
             background: url(../img/tour_pic1.jpg) center center/100% no-repeat
@@ -241,12 +196,6 @@ header
     display: flex
     margin-top: 160px
     justify-content: center
-
-    #hawaii
-        background: url(../img/imgHawaii1.jpg) center center/100% no-repeat
-        transition: 1s background-size
-    #hawaii:hover
-        +box_hover(105%)
     &_box
         +box()
     &_description
@@ -262,7 +211,12 @@ header
             margin-top: 55px
             width: 271px
         &_button:hover
-            +button_hover() 
+            +button_hover()
+    #hawaii
+        background: url(../img/imgHawaii1.jpg) center center/100% no-repeat
+        transition: 1s background-size
+    #hawaii:hover
+        +box_hover(105%)
 
 .leave_request
     display: flex
@@ -272,7 +226,6 @@ header
     width: 100%
     height: 518px
     background: url(../img/imgForm1.jpg) center center/cover no-repeat
-
     &_description
         display: flex
         flex-direction: column
@@ -282,7 +235,6 @@ header
         &_text
             margin-top: 30px
             +text(400, 18px, 33px, $main_text_color)
-
     &_form
         display: flex
         flex-direction: column
@@ -309,15 +261,8 @@ header
     display: flex
     margin-top: 160px
     justify-content: center
-
-    #feedback
-        background: url(../img/imgHawaii2.jpg) center center/100% no-repeat
-        transition: 1s background-size
-    #feedback:hover
-        +box_hover(105%)
     &_box
         +box()
-
     &_description
         margin: 50px 98px 0 0
         max-width: 400px
@@ -333,6 +278,11 @@ header
             width: 271px
         &_button:hover
             +button_hover()
+    #feedback
+        background: url(../img/imgHawaii2.jpg) center center/100% no-repeat
+        transition: 1s background-size
+    #feedback:hover
+        +box_hover(105%)
 
 footer
     padding: 0 120px 0 120px
@@ -343,21 +293,17 @@ footer
     width: 100%
     margin-top: 160px
     background-color: #EBEBF0
-
     .logo
         cursor: pointer
-
     .text
         cursor: pointer
         +text(500, 14px, 20px, #7D6F6F)
         margin-left: 75px
-    
     .social_medias
         width: 206px
         display: flex
         justify-content: space-between
         margin-left: auto
-    
     .social_medias > img
         cursor: pointer
 
